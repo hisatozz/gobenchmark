@@ -49,7 +49,7 @@ func BenchmarkBase64Decode(b *testing.B) {
 	}
 }
 
-func BenchmarkHMAC(b *testing.B) {
+func BenchmarkHMAC_SHA256(b *testing.B) {
 	src := []byte(str1024)
 	key := []byte(key256bit)
 
