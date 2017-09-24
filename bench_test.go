@@ -65,7 +65,7 @@ func BenchmarkHMAC_SHA256(b *testing.B) {
 	}
 }
 
-func BenchmarkAES256Enc(b *testing.B) {
+func BenchmarkAES256_GCM_Enc(b *testing.B) {
 	src := []byte(str1024)
 	key := []byte(key256bit)
 
@@ -83,7 +83,7 @@ func BenchmarkAES256Enc(b *testing.B) {
 	}
 }
 
-func BenchmarkAES256Dec(b *testing.B) {
+func BenchmarkAES256_GCM_Dec(b *testing.B) {
 	src, _ := hex.DecodeString(ciphertextAES256)
 	key := []byte(key256bit)
 	nonce, _ := hex.DecodeString(nonceGCM)
